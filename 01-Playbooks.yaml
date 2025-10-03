@@ -1,5 +1,5 @@
 - name: Learning playbooks by pinging server
-  host: frontend
+  hosts: frontend
   #list of tasks need to be executed
   tasks:
   - name: pinging
