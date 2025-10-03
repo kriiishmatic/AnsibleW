@@ -1,0 +1,7 @@
+- name: Learning playbooks
+  host: frontend
+  #list of tasks need to be executed
+  tasks:
+  - name: ping
+    ansible.builtin.ping
+  
