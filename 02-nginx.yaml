@@ -1,0 +1,7 @@
+- name: Learning to install packages eg:Nginx
+  hosts: frontend
+  tasks:
+  -name: Installing Nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
