@@ -2,6 +2,5 @@
   host: frontend
   #list of tasks need to be executed
   tasks:
-  - name: ping
-    ansible.builtin.ping
-  
+  - name: pinging
+    ansible.builtin.ping:
