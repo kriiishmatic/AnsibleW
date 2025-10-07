@@ -1,5 +1,5 @@
 - name: Learning playbooks by pinging server/ Test connectivity to hosts
-  hosts: ansiblenode
+  hosts: appnode
   #list of tasks/collections/modules need to be executed
   tasks:
   - name: pinging

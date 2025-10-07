@@ -1,5 +1,5 @@
 - name: Learning to install packages eg:Nginx
-  hosts: ansiblenode
+  hosts: appnode
   become: yes
   tasks:
   - name: Installing nginx
