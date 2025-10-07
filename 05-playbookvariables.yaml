@@ -1,0 +1,12 @@
+- name: Playlevel variables
+  hosts: local
+  connection: local #connects to local host
+  vars: 
+   course: "Ansible course"
+   duration: 12
+   trainer: krishna
+  tasks:
+  - name: Course details $$$
+    debug:
+      msg: " Course ::{{ course}}, Duration ::{{ duration }}, TRAINER :: {{ trainer }}"
+      
