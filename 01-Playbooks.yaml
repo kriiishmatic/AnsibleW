@@ -1,6 +1,6 @@
-- name: Learning playbooks by pinging server
-  hosts: frontend
-  #list of tasks need to be executed
+- name: Learning playbooks by pinging server/ Test connectivity to hosts
+  hosts: ansiblenode
+  #list of tasks/collections/modules need to be executed
   tasks:
   - name: pinging
     ansible.builtin.ping:
