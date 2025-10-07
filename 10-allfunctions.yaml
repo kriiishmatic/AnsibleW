@@ -2,21 +2,25 @@
   hosts: local
   connection: local
   vars:
-  trainer: krishna
-  place: HYDERABAd
+    trainer: krishna
+    place: HYDERABAD
+
   tasks:
-  - name: Taking yaml info into variable
-    ansible.builtin.set_fact:
-      student_info: "{{ lookup('file', 'student.yaml') | from_yaml }}"
-  - name: Coverting and showing it as message
-    debug:
-      msg: "JSON ::: {{ student_info | to_nice_json }}"
-  - name: converting into a file
-    copy:
-      destination: ./student_info.json
-      content: "{{ student_info | to_nice_json }}"
-  - name: UPPER lower
-    debug:
-      msg: " Trainer ::: {{ trainer | upper }}"
-      
+    - name: Taking yaml info into variable
+      ansible.builtin.set_fact:
+        student_info: "{{ lookup('file', 'student.yaml') | from_yaml }}"
+
+    - name: Converting and showing it as message
+      ansible.builtin.debug:
+        msg: "JSON ::: {{ student_info | to_nice_json }}"
+
+    - name: Converting into a file
+      ansible.builtin.copy:
+        dest: ./student_info.json
+        content: "{{ student_info | to_nice_json }}"
+
+    - name: UPPER lower
+      ansible.builtin.debug:
+        msg: "Trainer ::: {{ trainer | upper }}"
+
     
