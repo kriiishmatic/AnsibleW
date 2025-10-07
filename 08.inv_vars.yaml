@@ -3,5 +3,5 @@
   connection: local
   tasks:
     - name: Taking variables from inventory
-      debug:
+      ansible.builtin.debug:
       msg: " Course ::{{ course}}, Duration ::{{ duration }}, TRAINER :: {{ trainer }}"
