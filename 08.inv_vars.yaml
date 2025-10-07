@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - name: Taking variables from inventory
-    debug:
-    msg: " Course ::{{ course}}, Duration ::{{ duration }}, TRAINER :: {{ trainer }}"
+    - name: Taking variables from inventory
+      debug:
+      msg: " Course ::{{ course}}, Duration ::{{ duration }}, TRAINER :: {{ trainer }}"
