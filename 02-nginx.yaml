@@ -2,14 +2,15 @@
   hosts: appnode
   become: yes
   tasks:
-  - name: Installing nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
-       
-  - name: start nginx
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+  tasks:
+    - name: Install Nginx package
+      ansible.builtin.yum:
+        name: nginx
+        state: present  # Ensures Nginx is installed
+
+    - name: Start and enable Nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes 
 
