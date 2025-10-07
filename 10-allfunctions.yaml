@@ -1,0 +1,22 @@
+- name: Learning functions
+  hosts: local
+  connection: local
+  vars:
+  trainer: krishna
+  place: HYDERABAd
+  tasks:
+  - name: Taking yaml info into variable
+    ansible.builtin.set_fact:
+      student_info: "{{ lookup('file', 'student.yaml') | from_yaml }}"
+  - name: Coverting and showing it as message
+    debug:
+      msg: "JSON ::: {{ student_info | to_nice_json }}"
+  - name: converting into a file
+    copy:
+      destination: ./student_info.json
+      content: "{{ student_info | to_nice_json }}"
+  - name: UPPER lower
+    debug:
+      msg: " Trainer ::: {{ trainer | upper }}"
+      msg: " Address ::: {{ place | lower }}"
+    
