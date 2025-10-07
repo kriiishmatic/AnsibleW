@@ -2,7 +2,7 @@
   hosts: local
   connection: local #connects to local host
   vars_files: 
-   -course.yaml
+   - course.yaml
   tasks:
   - name: Course details $$$
     debug:
