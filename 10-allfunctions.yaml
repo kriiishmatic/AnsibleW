@@ -18,5 +18,5 @@
   - name: UPPER lower
     debug:
       msg: " Trainer ::: {{ trainer | upper }}"
-      msg: " Address ::: {{ place | lower }}"
+      
     
